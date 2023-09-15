@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Theme override for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ */
+#}
+{{ attach_library('specbee_theme/header-style') }}
+
+<div class="contact-btn">
+	<a class="contact-link" href="{{ link }}">Contact Us</a>
+</div>
+
+<div class="navbar__contact">
+	<svg version="1.1" id="Layer_1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+		<style type="text/css">
+			.contact-st0 {
+				fill: #E3F040;
+			}
+			.contact-st1 {
+				fill: #0035F0;
+			}
+			.contact-st2 {
+				fill: url('#SVGID_1_');
+			}
+			.contact-st3 {
+				fill: #FFFFFF;
+			}
+			.contact-st4 {
+				fill: url('#SVGID_2_');
+			}
+		</style>
+		<circle class="contact-st0" cx="250.48" cy="249.9" r="245.21"></circle>
+		<g>
+			<g>
+				<path class="contact-st1" d="M328.99,384.19c-60.75-2.05-112.37-24.67-154.2-68.91c-29.92-31.64-48.55-69.14-55.62-112.08
+			c-2.07-12.56-3-25.46-2.86-38.19c0.35-32.18,31.5-55.56,62.78-47.9c3.21,0.79,5.35,2.43,6.82,5.41
+			c9.02,18.21,18.15,36.37,27.23,54.55c2.28,4.56,1.91,6.71-1.74,10.37c-6.22,6.24-12.43,12.5-18.72,18.67
+			c-1.38,1.35-1.73,2.51-1.1,4.4c16.25,49.27,49.02,81.97,98.26,98.24c1.91,0.63,3.06,0.25,4.4-1.12
+			c6.24-6.37,12.57-12.65,18.89-18.94c3.39-3.37,5.59-3.75,9.85-1.62c18.37,9.16,36.72,18.38,55.11,27.5
+			c2.77,1.37,4.33,3.39,5.06,6.36c7.84,31.6-15.6,62.41-48.17,63.26C332.98,384.23,330.98,384.19,328.99,384.19z"></path>
+				<path class="contact-st1" d="M315.45,252.79c-8.38-0.01-16.5-1.43-24.26-4.55c-2.09-0.84-3.67-0.61-5.57,0.41
+			c-8.39,4.52-16.85,8.91-25.29,13.34c-3.91,2.05-6.9,1.9-9.25-0.43c-2.33-2.31-2.57-5.01-0.71-8.98
+			c3.64-7.78,7.25-15.57,10.99-23.29c0.79-1.64,0.64-2.74-0.41-4.2c-29.32-40.48-8.9-95.9,39.64-107.69
+			c36.25-8.8,74.39,15.58,81.91,52.36c8.19,40.08-18.72,77.64-59.2,82.57C320.7,252.66,318.06,252.65,315.45,252.79z M299.49,184.69
+			c0.06-6.55-5.1-11.87-11.58-11.95c-6.44-0.08-11.79,5.24-11.8,11.73c-0.01,6.49,5.27,11.79,11.75,11.8
+			C294.15,196.29,299.44,191.03,299.49,184.69z M304.4,184.55c0.02,6.49,5.34,11.78,11.8,11.73c6.3-0.05,11.54-5.33,11.58-11.66
+			c0.04-6.51-5.2-11.84-11.67-11.87C309.65,172.72,304.38,178.02,304.4,184.55z M332.68,184.42c-0.04,6.52,5.17,11.81,11.67,11.87
+			c6.26,0.05,11.63-5.23,11.74-11.52c0.11-6.49-5.07-11.86-11.56-12C338.08,172.61,332.72,177.89,332.68,184.42z"></path>
+			</g>
+		</g>
+	</svg>
+</div>
+
+{# {% set heading_id = attributes.id ~ '-menu'|clean_id %} #}
+<nav class="nav">
+	{% block content %}
+		{{ content }}
+	{% endblock %}
+</nav>
+

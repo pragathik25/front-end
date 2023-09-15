@@ -1,0 +1,13 @@
+name: Custom theme
+type: theme
+description: 'Custom theme'
+core_version_requirement: '>=9.2'
+base theme: olivero
+regions:
+  header: 'Header'
+  content: 'Content'
+  content_below: 'Content Below'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_bottom: 'Footer Bottom'

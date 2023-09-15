@@ -1,0 +1,24 @@
+insights-block :
+  css:
+    theme:
+      css/insights.css: {}
+
+testimonial-block :
+  css:
+    theme:
+      css/testimonial.css: {}
+
+standing-out-block :
+  css:
+    theme:
+      css/standingout.css: {}
+
+cta-block :
+  css:
+    theme:
+      css/cta.css: {}
+
+crafting-block :
+  css:
+    theme:
+      css/crafting.css: {}

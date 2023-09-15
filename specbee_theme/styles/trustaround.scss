@@ -1,0 +1,58 @@
+@use './abstracts';
+
+.trust__around {
+
+  &__title {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 6rem;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: yellow;
+      width: 3.75rem;
+      height: 0.3rem;
+      left: 50%;
+      top: 35px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 1309px;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    &__desc {
+      font-size: 1.125rem;
+      max-width: 1000px;
+      margin: auto;
+      color: white;
+      margin-bottom: 4rem;
+    }
+
+    &__btn {
+      display: block;
+      text-align: center;
+      margin-top: 6rem;
+      margin-bottom: 1rem;
+
+      &-link {
+        @include abstracts.button;
+      }
+    }
+  }
+.bluebg {
+  background-color: blue;
+}
+
+.plainbg {
+  .trust__around__title {
+      color: black;
+      margin-bottom: 2rem;
+  }
+}

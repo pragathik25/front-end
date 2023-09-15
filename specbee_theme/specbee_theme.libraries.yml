@@ -1,0 +1,86 @@
+global-style :
+  css:
+    theme:
+      css/global-style.css: {}
+
+header-style :
+  css:
+    theme:
+      css/header.css: {}
+  js:
+    js/accordian.js: {}
+
+insights-block :
+  css:
+    theme:
+      css/insights.css: {}
+
+testimonial-block :
+  css:
+    theme:
+      css/testimonial.css: {}
+
+standing-out-block :
+  css:
+    theme:
+      css/standingout.css: {}
+
+cta-block :
+  css:
+    theme:
+      css/cta.css: {}
+
+crafting-block :
+  css:
+    theme:
+      css/crafting.css: {}
+
+banner-block :
+  css:
+    theme:
+      css/banner.css: {}
+
+trust-around-block :
+  css:
+    theme:
+      css/trustaround.css: {}
+
+slider-block:
+  version: 1.x
+  css:
+    theme:
+      css/slider.css: {}
+  js:
+    js/slider.js: {}
+
+  dependencies:
+    - core/jquery
+
+
+slick:
+  version: 1.x
+  css:
+    theme:
+      assets/slick/slick.css: {}
+      assets/slick/slick-theme.css: {}
+  js:
+    assets/slick/slick.min.js: {}
+
+on-boolean:
+  css:
+    theme:
+      css/on-boolean.css: {}
+
+off-boolean:
+  css:
+    theme:
+      css/off-boolean.css: {}
+
+alias-style:
+  css:
+    theme:
+      css/alias.css: {}
+
+form-js:
+  js:
+    js/form.js: {}
